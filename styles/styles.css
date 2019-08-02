@@ -1,0 +1,849 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/*Starting of Signup Page designing*/
+.background_image{
+	width:1350px;
+	background-image:url(../images/beautiful_view.jpg);
+	background-color:#0FC;
+	background-size:100%;
+	height:auto;
+}
+#dialogoverlay{
+	display:none;
+	opacity:0.9;
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:#FFFFFF;
+	width:100%;
+	z-index:10;	
+}
+
+@-webkit-keyframes loginmove {
+    0%   {top: 0px;}
+    100% {top: 100px;}
+}  
+#dialogbox{
+	display:none;
+	position:fixed;
+	background-color:#FFFFFF;
+	width:450px;
+	height:230px;	
+	z-index:10;
+	border:1px solid #AAA;
+}
+#dialogbox > div{
+	margin:8px;
+}
+#dialogboxhead{
+	padding:10px;
+	background-image:url(../images/menu_bg.png);
+	text-align:center;
+	font-size:26px;
+	color:#FFF;
+}
+#dialogboxbody{
+	padding:20px;
+}
+
+#dialogboxfoot{
+	padding:10px;
+}
+#dialogboxfoot button{
+	width:100px;
+	height:30px;
+    background: -webkit-radial-gradient(#669933, #669966, #669933);
+  	background: -o-radial-gradient(#669933, #669966, #669933);
+  	background: -moz-radial-gradient(#669933, #669966, #669933);
+  	background: radial-gradient(#66CC33 55%, #66CC33 35%, #66CC33 5%);
+	//color:#FFFFFF;
+	position:relative;
+	left:60px;
+	margin-right:9px;
+	display:inline;
+}
+#dialogboxfoot a{
+	position:relative;
+	left:15px;	
+}
+#dialogboxfoot input{
+	padding:5px;
+	float:right;
+	width:100px;	
+}
+.header{
+	width:1125px;
+	height:48px;
+	margin:auto;
+	padding:20px;
+}
+.header_logo{
+	position:relative;
+	top:3px;
+	width:340px;
+	height:40px;
+	float:left;
+}
+.header_log_in{
+	width:65px;
+	height:33px;
+	color:#FFFFFF;
+	padding-top:08px;
+	float:right;	
+}
+.header_log_in a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.body_content{
+	width:1147;
+	height:auto;
+	margin:0px auto;
+	padding-bottom:120px;
+}
+
+.body_banner{
+	width:665px;
+	height:433px;
+	float:left;
+	padding-top:180px;
+	display:inline-block;
+	
+}
+.body_banner h2{
+	font-size:2em;
+	color:#FFFFFF;	
+	
+}
+.body_signup{
+	width:479px;
+	height:530px;
+	background-color:#FFF;
+	display:inline-block;
+}
+.sign_up{
+	background-image:url(../images/menu_bg%20-%20Copy.png);
+	width:450px;
+	height:50px;
+	margin:10px auto;
+	text-align:center;
+}
+.sign_up span{
+	position:relative;
+	top:11px;
+	font-size:25px;
+	color:#FFFFFF;
+}
+
+.signup_form{
+	width:450px;
+	margin:0px auto;	
+}
+.text_box_fname{
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	font-size:15px;
+	padding:5px;
+	width:250px;
+	margin-bottom:3px;
+	margin-top:3px;
+	height:30px;
+}
+.text_box_fname:hover{
+	border:1px solid #006;
+}
+.text_box_lname{
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	font-size:15px;
+	padding:5px;
+	width:180px;
+	margin-bottom:3px;
+	margin-top:3px;
+	height:30px;
+}
+.text_box_lname:hover{
+	border:1px solid #006;
+}
+.text_box{
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	font-size:15px;
+	padding:5px;
+	width:450px;
+	margin-bottom:3px;
+	margin-top:3px;
+	height:30px;
+	z-index:1;
+}
+.text_box:hover{
+	border:1px solid #006;
+}
+.text_box_uname{
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	font-size:15px;
+	padding:5px;
+	width:450px;
+	margin-bottom:3px;
+	margin-top:3px;
+	height:30px;	
+}
+.text_box_uname:hover{
+	border:1px solid #006;
+}
+
+select{
+	background-color:#FFFFFF;
+	border:1px solid #E2E2E2;
+	font-size:15px;
+	padding:5px;
+	width:450px;
+	margin-bottom:3px;
+	margin-top:3px;
+}
+select:hover{
+	border:1px solid #006;
+}
+	
+.signupbtn{
+    background: -webkit-radial-gradient(#669933, #669966, #669933); /* Safari 5.1 to 6.0 */
+  	background: -o-radial-gradient(#669933, #669966, #669933); /* For Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(#669933, #669966, #669933); /* For Firefox 3.6 to 15 */
+  	background: radial-gradient(#66CC33 55%, #66CC33 35%, #66CC33 5%); /* Standard syntax */
+	border:1px solid #E2E2E2;
+	border-radius:3px;
+	font-size:25px;
+	padding:8px;
+	width:430px;
+	margin-bottom:4px;
+	margin-top:4px;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	height:50px;
+}
+
+#indication{
+	display:none;
+	position:absolute;
+	width:120px;
+	height:auto;
+	border:#0F0 1px solid;
+	left:428px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	padding-top:8px;
+	padding-left:8px;
+	padding-right:8px;
+	padding-botom:15px;
+	z-index:10;
+	background-color:#FFF;	
+}
+/*End of Signup Page Designing*/
+/*Starting of Header Designing*/
+#page_top{
+	background-image:url(../images/menu_bg.png);
+	background-size:100%;
+	height:75px;
+	width:1366px;
+	position:fixed;
+	z-index:1000;
+}
+#page_top > #page_top_wrap{
+	width:1210px;
+	margin:0px auto;
+	height:75px;
+	}
+
+#page_top > #page_top_wrap > #page_top_logo{
+	height:62px;
+	width:360px;
+	float:left;
+	padding-top:13px;
+}
+
+#page_top > #page_top_wrap > #page_top_rest{
+	width:620px;
+	height:75px;
+	float:right;
+	padding-top:3px;
+}
+#search_box_container{
+	width:742px;
+	height:36px;
+	float:right;
+	color:#ffffff;
+	position:relative;
+}
+
+#showname{ 
+	float:left;
+	height:32px;
+	width:240px;
+}
+#showname span{
+	position:relative;
+	top:-10px;
+	font-weight:bold;
+}
+#showname span a{
+	text-decoration:none;
+	color:#FFFFFF;	
+}
+#search_box{
+	float:right;
+	position:relative;
+	right:7px;
+	top:3px;
+}
+
+#search_box input[type="search"] {
+	background:url(../images/search-white1.jpg) no-repeat 0px -1px #267bb6;
+	outline:none;
+	border:0 none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width:280px;
+	padding:6px 15px 6px 35px;
+	text-shadow:0px 2px 2px rgba(0,0,,0,0.3);
+	-webkit-box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+	box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+	-webkit-transition:all 0.7s ease 0%;
+	-moz-transition:all 0.7s ease 0%;
+	-o-transition:all 0.7s ease 0%;
+	transition:all 0.7s ease 0%
+}
+#search_box input[type="search"]:focus {
+	background:url(../images/search_dark.jpg) no-repeat 10px 6px #fcfcfc;
+	color:#6a6f75;
+	width:280px;
+	-webkit-box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(0,0,0,0.9) inset;
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(0,0,0,0.9) inset;
+	box-shadow:0 1px 0 rgba(255,255,255,0.1),0 1px 0 rgba(0,0,0,0.9) inset;
+	text-shadow:0px 2px 3px rgba(0,0,,0,0.1);
+}
+
+#friendlist {
+	display:none;
+	z-index:16000;
+	width:640px;	
+}
+#menu {
+	width:750px;
+	height:32px;
+	position:relative;
+	left:-2px;
+	float:right;
+	}
+#menu a{
+	color:#ffffff;
+	text-decoration:none;
+	font-size:15px;
+	background-repeat:no-repeat;
+	padding-left:8px;
+	padding-top:8px;
+	padding-right:8px;
+	padding-bottom:8px;
+	height:32px;
+	width:100px;
+	position:relative;
+	left:0px;
+	top:8px;
+	display:inline;
+	font-family:Verdana, Geneva, sans-serif;
+	border-right:#03C solid 1px;
+
+}
+#menu a:hover{
+	background-image:url(../images/home_bg.png);
+}
+/*
+#log_in span{
+	color:#FFF;
+	font-size:15px;
+	font-family:Berlin Sans FB;
+}
+a{
+	text-decoration:none;
+}
+#signin{
+	font-family:Tahoma, Geneva, sans-serif;
+	width:55px;
+	height:22px;
+	border:1px solid #E2E2E2; 
+}
+#page_top > #page_top_wrap > #page_top_rest > #log_in{
+	float:right;
+}*/
+/*Starting of body conntent*/
+#page_middle{
+	height:auto;
+	background-image:url(../images/background.png);
+	position:absolute;
+	top:75px;
+}
+#page_middle > #page_middle_content{
+	width:1210px;
+	height:auto;
+	position:absolute;
+	margin:0px auto 40px;
+	left:69px;
+	background-color:#E9EAED;
+	min-height:560px;
+}
+#profilepicbox{
+	float:left;
+	margin-top:50px;
+	width:500px;
+	height:350px;
+	background-color:#FFF;	
+}
+#profilepicbox #timelinepic{
+	border:#999 2px solid;
+	background-color:#006;
+	width:500px;
+	height:200px;
+	overflow-y:hidden;
+}
+#timelinepic > img{
+	z-index:2000; 
+	width:500px; 
+	height:200px;
+}
+#timelinepic > a {
+	display: none;
+	position:absolute; 
+	margin:140px 0px 0px 350px;
+	z-index:4000;
+	background:#D8F08E;
+	border:#81A332 1px solid;
+	border-radius:3px;
+	padding:5px;
+	font-size:12px;
+	text-decoration:none;
+	color:#60750B;
+}
+#timelinepic > form{
+	display:none;
+	position:absolute; 
+	z-index:3000;
+	padding:10px;
+	opacity:.8;
+	background:#F0FEC2;
+	width:480px;
+	height:180px;
+}
+#timelinepic:hover a {
+    display: block;
+}
+#profilepicbox #profilepic{
+	margin-top:-70px;
+	margin-left:18px;
+	width:140px;
+	height:160px;
+	border:#999 2px solid;
+	z-index:1000;
+}
+#profilepic img{
+	z-index:4500; 
+	width:140px;
+}
+#profilepic a {
+	display: none;
+	position:absolute; 
+	margin:135px 0px 0px 1px;
+	z-index:6000;
+	background:#D8F08E;
+	border:#81A332 1px solid;
+	border-radius:3px;
+	padding:5px;
+	font-size:12px;
+	text-decoration:none;
+	color:#60750B;
+}
+#profilepic > form{
+	display:none;
+	position:absolute; 
+	z-index:5000;
+	padding:10px;
+	opacity:.8;
+	background:#F0FEC2;
+	width:120px;
+	height:140px;
+}
+#profilepic:hover a {
+	display: block;
+}
+#profilepicbox #profilename{
+	position:relative;
+	left:180px;
+	top:-95px;
+	padding:15px;
+	width:280px;
+}
+#profilepicbox #frienddecision{
+	position:relative;
+	left:90px;
+	top:-95px;
+	padding-top:5px;
+	padding-left:15px;
+	width:400px;
+}
+#profilepicbox #frienddecision button{
+	margin-right:10px;
+	padding:5px;	
+}
+#profilepicbox #profilename span{
+	font-weight:bolder;
+	font-size:24px;
+}
+#profilepicbox #profilename div{
+	font-size:12px;
+}
+
+#friendlistbox{
+	width:500px;
+	height:auto;
+	background-color:#FFF;
+	margin-top:30px;
+	float:right;
+}
+#friendlistbox #friendlisthead{
+	width:485px;
+	height:40px;
+	background-color:#C69;
+	font-size:26px;
+	padding-top:10px;
+	padding-left:15px;
+	color:#FFFFFF;
+}
+#friendlisthead a{
+	font-weight:bold;
+	color:#FFFFFF;	
+}
+#friendlistbody{
+	padding-top:10px;
+	padding-left:14px;
+	padding-bottom:5px;	
+}
+.showfriends{
+	width:106px;
+	height:auto;
+	display:inline-block;
+	margin-right:15px;
+	margin-bottom:15px;
+}
+.friendname{
+	text-align:center;
+	color:#00C;	
+}
+.friendname a{
+	color:#00C;
+	text-decoration:none;	
+}
+#photoframebox{
+	width:230px;
+	height:200px;
+}
+#photoframe{
+	width:200px;
+	height:200px;
+	float:right;
+	background:url(../images/Photo-gallery.PNG)	
+}
+#photoframe img{
+	width:106px;
+	height:101px;
+	margin-top:40px;
+	margin-left:20px;
+	transform:rotate(-16deg)
+}
+#dobold{
+	font-weight:bold;
+}
+#postbox{
+	background-color:#F5F5F5;
+	border:1px #999 solid;
+	width:550px;
+	display:inline-block;
+	padding:10px;
+	border-radius:3px;
+}
+#postboxhead{
+	font-size:18px;
+}
+#posttextarea{
+	margin-top:5px;	
+}
+#posttextarea textarea{
+	padding:6px;
+	width:535px;
+	height:44px;	
+}
+#photo_form span{
+	text-decoration:underline;
+	color:#36F;
+	cursor:pointer;
+		
+}
+#postarea textarea{
+	width:432px;
+	height:92px;
+}
+/*
+#profile{
+	width:250px;
+	height:270px;
+	border:#000 1px dashed;
+}
+#timeline{
+	width: 750px;
+	height: 270px;
+	position: absolute;
+	border: #000 1px dashed;
+	left: 425px;
+	top: 76px;
+}
+#message{
+	
+}
+#friendrequest{
+	
+}
+#notification{
+	
+}
+#setting{
+	
+}
+
+h2{
+	font-family:Arial, Helvetica, sans-serif;
+	padding-top:26px;
+	text-align:center;
+	color:#0084c6;
+}
+*/
+#page_bottom{
+	position:fixed;
+	height:35px;
+	width:100%;
+	top:632px;
+	background-image:url(../images/menu_bg.png);
+}
+#page_bottom > #page_bottom_copyright{
+	width:550px;
+	margin:auto;
+	padding-top:07px;
+	text-align:center;
+}
+/*Start of timeline styling*/
+#cover_pic{
+	width:1000px;
+	height:300px;
+	border:1px #000000 dashed;
+	background-color:#FFF;
+}
+#profile_pic{
+	width:160px;
+	height:180px;
+	border:1px #000000 dashed;
+	position:absolute;
+	top:180px;
+	left:193px;
+}
+#profile_pic_rest{
+	width:815px;
+	height:110px;
+	border:1px #000000 dashed;
+	position:absolute;
+	left:356px;
+	top:285px;
+}
+#profile_menu_rest{
+	width:815px;
+	height:53px;
+	border:1px #000000 dashed;
+}
+
+#profile_menu_rest span{
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:25px;
+	position:absolute;
+	top:13px;
+	left:20px	
+}
+#profile_menu_rest input{
+		position:relative;
+		top:13px;
+		left:520px;
+		width:120px;
+		font-size:15px;
+		font-family:Tahoma, Geneva, sans-serif;
+		padding:5px;
+		background-color:#FFF;
+		margin-right:8px;
+}
+
+#profile_menu{
+	width:815px;
+	height:55px;
+	border:1px #000000 dashed;
+}
+#menu2 {
+	width:570px;
+	height:45px;
+	position:relative;
+	top:8px;
+	left:30px;
+	}
+#menu2 a{
+	color:#0084c6;
+	text-decoration:none;
+	font-size:15px;
+	padding:8px;
+	height:32px;
+	width:100px;
+	position:relative;
+	top:-33px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	margin-left:15px;
+
+}
+#menu2 a:hover{
+	color:#000;
+}
+#menu2 .active{
+	color:#000;
+}
+/*End of Time styling*/
+
+
+/*Starting of boxes*/
+#body_content_center{
+	width:1000px;
+	height:220px;
+	margin:6px auto;
+	border:#000 1px dashed;	
+}
+#box{
+	background-color:#FFFFFF;
+	width:700px;
+	height:192px;
+	border:1px #000000 dashed;
+	margin:8px auto;
+}
+#box #head{
+	background-color:#F6F7F8;
+	width:700px;
+	height:38px;
+	border:1px #000000 dashed;
+}
+#box #element{
+	bockground-color:#FFFFFF;
+	width:618px;
+	height:118px;
+	margin:0px auto;
+	border:1px #000000 dashed;
+	font-size:13px;
+	padding-top:2px;
+}
+#box #head #title{
+	float:left;
+	color:#0084c6;
+	border:1px #000000 dashed;
+	height:28px;
+	width:300px;
+	padding-left:38px;
+	padding-top:10px;
+}
+#box #head #title a{
+		border:1px dashed #000000;
+		padding-left:18px;
+		padding-right:18px;
+		padding-bottom:10px;
+		padding-top:10px;
+		color:#0084c6;
+}
+#box #head #title a:hover{
+		color:#000;
+}
+#box #head #title a .active1{
+		background-color:#FFF;
+}
+#box #box_post{
+	margin:0px auto;
+	width:618px;
+	height:29px;
+	border:#000 1px dashed;
+}
+#box #box_post input{
+	width:70px;
+	font-size:15px;
+	font-family:Tahoma, Geneva, sans-serif;
+	padding:3px;
+	float:right;
+}
+
+/*End of Box*/
+
+
+
+/* Start of about boxes will use in friends as well as about*/
+
+
+#box{
+	width:1000px;
+	height:800px;
+	border:1px #000000 dashed;
+}
+#box_head{
+	width:1000px;
+	height:60px;
+	background-color:#F6F7F8;
+	border:1px dashed #000000;
+}
+#box_head_title{
+	height:48px;
+	width:100px;
+	font-size:28px;
+	padding-left:23px;
+	padding-top:12px;
+	border:1px dashed #000000;
+}
+#friends{
+	position:relative;
+	top:10px;
+	left:15px;
+	height:150px;
+	width:480px;
+	border:1px solid black;
+	display:inline-block;
+}
+#showlikefriends{
+	display:none;
+	position:fixed;
+	background-color:#FFFFFF;
+	width:600px;
+	height:410px;	
+	z-index:10;
+	border:1px solid #000;
+	overflow:scroll;
+	overflow-x:hidden;
+}
+
+#showlikefriends h2{
+	margin-left:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#showlikefriends img{
+	float:right;
+	cursor:pointer;	
+}
